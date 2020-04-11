@@ -35,6 +35,10 @@ Android sends a [broadcast](https://developer.android.com/guide/components/broad
 
 This issue's severity is marked as 'high' because this can be used to directly spy on a user and study his/her phone usage pattern. This broadcast needs to be protected with *permissions*.
 
+**Our suggestion to the Android team**:
+
+The screen state broadcasts need to protected with *permissions*.
+
 Related links:
 [ACTION_SCREEN_OFF](https://developer.android.com/reference/android/content/Intent#ACTION_SCREEN_OFF) and [ACTION_SCREEN_ON](https://developer.android.com/reference/android/content/Intent#ACTION_SCREEN_ON) broadcasts.
 
@@ -105,7 +109,10 @@ long mobileDataUsed = TrafficStats.getMobileRxBytes() + TrafficStats.getTotalTxB
 long totalDataUsed = TrafficStats.getTotalRxBytes() + TrafficStats.getTotalTxBytes();
 long wifiDataUsed = totalDataUsed - mobileDataUsed;
 ```
-TrafficStats class should either be removed or should be protected with *permissions*. [NetworkStatsManager](https://developer.android.com/reference/android/app/usage/NetworkStatsManager) is already present in Android. So, it's time that TrafficStats is removed in the future versions of Android.
+
+**Our suggestion to the Android team**:
+
+TrafficStats class should be removed. [NetworkStatsManager](https://developer.android.com/reference/android/app/usage/NetworkStatsManager) is already present in Android. So, it's time that TrafficStats is removed in the future versions of Android.
 
 Related links:
 [TrafficStats](https://developer.android.com/reference/android/net/TrafficStats)
@@ -129,6 +136,7 @@ for (ApplicationInfo packageInfo : packages) {
         Drawable appIcon = pm.getApplicationIcon(packageInfo);
 }
 ```
+**Our suggestion to the Android team**:
 
 getInstalledApplications() needs to be protected with *permissions* so that the user can decide whether to allow or disallow an app to use this method.
 
@@ -145,7 +153,9 @@ Sensors like Gyroscope (used to detect rotation), Accelerometer (used to detect 
 
 The severity of this issue is marked as 'high' because, any app running a foreground or a background service can continuously monitor and detect even the slightest rotation or movement of your phone and create a 3D visualization of your body movements. This issue can turn any app into a spyware.
 
-The aforementioned sensors need to be protected with permissions just like WiFi, Bluetooth, Camera etc.
+**Our suggestion to the Android team**:
+
+In the future versions of Android, the aforementioned sensors need to be protected with permissions just like WiFi, Bluetooth, Camera etc.
 
 Related links:
 [Motion sensors](https://developer.android.com/guide/topics/sensors/sensors_motion)
