@@ -33,7 +33,7 @@ The issues being listed here are applicable for the current version of Android (
 
 Android sends a [broadcast](https://developer.android.com/guide/components/broadcasts) whenever the phone's screen turns on/off. So, if an app is running a service (whether it's foreground or a background service), it can receive a broadcast and record when you turn on/off your screen and the app is not required to ask any permissions. In this way, the app can roughly figure out from what time to what time you use your phone and for how many hours you are on the phone everyday. 
 
-This issue's severity is marked as 'high' because this can be used to directly spy on a user and study his/her phone usage pattern. This broadcast needs to be protected with *permissions*.
+This issue's severity is marked as 'high' because this can be used to directly spy on a user and study his/her phone usage pattern.
 
 **Our suggestion to the Android team**:
 
