@@ -1,3 +1,4 @@
+
 # Privacy Issues in Android
 
 ## Introduction
@@ -22,7 +23,7 @@ Here, the 'severity' is defined as "how severely does this issue affect user's p
 
 ### Note
 
-The issues being listed here are applicable for the current version of Android (Android 11, Android R, API 30) which was released on February 19, 2020.
+The issues being listed here are applicable till Android 10, Android Q, API 29. We're test the validity of all these issues on Android R and will update the results of it soon.
 
 
 ## List of Issues
